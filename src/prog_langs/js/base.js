@@ -1,0 +1,1 @@
+var content = '<p class="codeblock" style="background:#1d2020;color:#e3e3e3;border-radius:8px;padding:8px 16px;font-family:SFMono-Regular, Menlo, Monaco, Consolas, monospace;white-space:nowrap;overflow-x:auto;font-size:0.962em;">' + (selected != '' ? selected : '') + '</p>';

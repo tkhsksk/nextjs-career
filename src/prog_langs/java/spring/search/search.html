@@ -1,0 +1,25 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template Sample</title>
+    </head>
+    <body>
+        <p>名前を入力してください。</p>
+        <form th:action="@{/user/search}" th:object="${userSearchForm}" method="GET">
+            <input type="text" th:field="*{word}">
+            <input type="submit" value="検索する">
+        </form>
+
+    <ul>
+        <div th:each="user : ${userSearchList}" th:object="${userSearchList}">
+            <span th:text="${user.id}"></span>
+            <span th:text="${user.name}"></span>
+            <span th:text="${user.createdAt}"></span>
+            <span th:text="${user.updatedAt}"></span>
+        </div>
+    </ul>
+
+    </body>
+</html>

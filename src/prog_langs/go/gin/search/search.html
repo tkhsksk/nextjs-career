@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample App</title>
+</head>
+<body>
+    <form method="GET" action="/search" id="create_form">
+        <p>名前： <input type="text" name="name" value="{{.query}}" /></p>
+    </form>
+    <p>
+        <input type="submit" form="create_form" value="検索" /> 
+    </p>
+
+    {{ range .datas }}
+    <p>{{ .ID }}: {{.Name}}: {{.CreatedAt}} / <a href="/edit/{{.ID}}">編集</a></p>
+    {{ end }}
+</body>
+</html>

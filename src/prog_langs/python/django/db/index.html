@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>home page!</title>
+</head>
+<body>
+<p>hello world.</p>
+
+<form action="" method="post">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button type="submit" value="submit">登録</button>
+</form>
+
+</body>
+</html>

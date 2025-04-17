@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample App</title>
+</head>
+<body>
+    <form method="POST" action="/user" id="create_form">
+        <p>名前： <input type="text" name="name" value="" /></p>
+    </form>
+    <p>
+        <input type="submit" form="create_form" value="作成" /> 
+        <a href="/"><input type="button" value="戻る" /></a>
+    </p>
+
+    {{ range .datas }}
+    <p>{{ .ID }}: {{.Name}}: {{.CreatedAt}} / <a href="/edit/{{.ID}}">編集</a></p>
+    {{ end }}
+</body>
+</html>

@@ -1,0 +1,328 @@
+{
+    "menus": [
+        {
+            "id": 1,
+            "title": "about",
+            "detail": "私について",
+            "subs": ["biography","history","work_history","skills"]
+        },
+        {
+            "id": 2,
+            "title": "php",
+            "detail": "phpについて",
+            "subs": ["helloWorld","calc","function","array","crud","post,get","laravel"]
+        },
+        {
+            "id": 3,
+            "title": "python",
+            "detail": "phthonについて",
+            "subs": ["helloWorld","calc","def","array","crud","post,get","django"]
+        },
+        {
+            "id": 4,
+            "title": "java",
+            "detail": "javaについて",
+            "subs": ["helloWorld","calc","function","array","crud","post,get","Spring_Boot"]
+        },
+        {
+            "id": 5,
+            "title": "go",
+            "detail": "goについて",
+            "subs": ["helloWorld","calc","func,struct","array","crud","post,get","gin"]
+        },
+        {
+            "id": 6,
+            "title": "swift",
+            "detail": "swiftについて",
+            "subs": ["helloWorld","calc","func,class","array"]
+        },
+        {
+            "id": 7,
+            "title": "JavaScript",
+            "detail": "主にnext.jsについて",
+            "subs": ["basis","customize"]
+        }
+    ],
+
+    "backend": [
+        {
+            "id": 1,
+            "category": "PHP",
+            "progs": [
+                {
+                    "name":"php v5.7〜8.2",
+                    "years":"8年",
+                    "note":"最適な記述と、指示、改修が可能",
+                    "log":"php"
+                },
+                {
+                    "name":"Symfony",
+                    "years":"8年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Laravel",
+                    "years":"4年",
+                    "note":"最適な記述と、指示、改修が可能",
+                    "log":"php#laravel"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category": "python",
+            "progs": [
+                {
+                    "name":"python",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"python"
+                },
+                {
+                    "name":"Django",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"python#django"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category": "Java",
+            "progs": [
+                {
+                    "name":"Java",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"java"
+                },
+                {
+                    "name":"Spring Boot",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"java#Spring_Boot"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category": "Go",
+            "progs": [
+                {
+                    "name":"Go",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"go"
+                },
+                {
+                    "name":"gin",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能",
+                    "log":"go#gin"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category": "Shell",
+            "progs": [
+                {
+                    "name":"macOS",
+                    "years":"5年",
+                    "note":"環境設計・構築が可能、基本的なlinuxコマンドが可能"
+                },
+                {
+                    "name":"Windows PowerShell",
+                    "years":"5年",
+                    "note":"基本的な環境設計・構築が可能"
+                },
+                {
+                    "name":"Amazon Linux",
+                    "years":"4年",
+                    "note":"環境設計・構築が可能"
+                },
+                {
+                    "name":"Amazon Linux2",
+                    "years":"4年",
+                    "note":"環境設計・構築が可能"
+                },
+                {
+                    "name":"Amazon Linux2023",
+                    "years":"1年",
+                    "note":"環境設計・構築が可能"
+                },
+                {
+                    "name":"git",
+                    "years":"4年",
+                    "note":"基本的な環境設計・構築が可能"
+                }
+            ]
+        }
+    ],
+
+    "front": [
+        {
+            "id": 1,
+            "category": "html",
+            "progs": [
+                {
+                    "name":"html",
+                    "years":"9年",
+                    "note":"最適な記述と、指示、改修が可能"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category": "template",
+            "progs": [
+                {
+                    "name":"Smarty",
+                    "years":"1年6か月",
+                    "note":"適した記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Twig",
+                    "years":"8年",
+                    "note":"適した記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Laravel Blade",
+                    "years":"3年",
+                    "note":"適した記述と、指示、改修が可能"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category": "css",
+            "progs": [
+                {
+                    "name":"CSS",
+                    "years":"9年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"SCSS",
+                    "years":"6年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Bootstrap v3〜5",
+                    "years":"9年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Tailwind CSS",
+                    "years":"",
+                    "note":"基本的なプログラミングが可能"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "category": "JavaScript",
+            "progs": [
+                {
+                    "name":"JavaScript",
+                    "years":"6年7カ月",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"TypeScript",
+                    "years":"約4年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"jQuery",
+                    "years":"9年",
+                    "note":"最適な記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Vue.js",
+                    "years":"2年",
+                    "note":"適した記述と、指示、改修が可能"
+                },
+                {
+                    "name":"Next.js",
+                    "years":"約2年",
+                    "note":"最適な記述と、指示、改修が可能",
+                    "log":"JavaScript"
+                },
+                {
+                    "name":"React",
+                    "years":"4年6カ月",
+                    "note":"最適な記述と、指示、改修が可能"
+                }
+            ]
+        }
+    ],
+
+    "database": [
+        {
+            "id": 1,
+            "category": "データベース",
+            "progs": [
+                {
+                    "name":"MySQL",
+                    "years":"7年",
+                    "note":"基本的な環境構築が可能"
+                },
+                {
+                    "name":"MariaDB",
+                    "years":"3年",
+                    "note":"基本的な環境構築が可能"
+                },
+                {
+                    "name":"PostgreSQL",
+                    "years":"3年",
+                    "note":"基本的な環境構築が可能"
+                }
+            ]
+        }
+    ],
+
+    "server": [
+        {
+            "id": 1,
+            "category": "AWS",
+            "progs": [
+                {
+                    "name":"EC2",
+                    "years":"5年",
+                    "note":"apache、nginxによるサーバー構築が可能"
+                },
+                {
+                    "name":"route53",
+                    "years":"5年",
+                    "note":"基本のドメイン設定、サブドメイン設定が可能"
+                },
+                {
+                    "name":"VPC",
+                    "years":"5年",
+                    "note":"基本的なネットワーク構成が可能"
+                },
+                {
+                    "name":"RDS",
+                    "years":"5年",
+                    "note":"基本的なdb設定が可能"
+                },
+                {
+                    "name":"SES",
+                    "years":"5年",
+                    "note":"基本的なメール送信設定が可能"
+                },
+                {
+                    "name":"WorkMail",
+                    "years":"5年",
+                    "note":"基本操作が可能"
+                },
+                {
+                    "name":"ELB",
+                    "years":"5年",
+                    "note":"基本的なロードバランスが可能"
+                }
+            ]
+        }
+    ]
+}

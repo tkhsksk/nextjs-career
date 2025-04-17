@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample App</title>
+</head>
+<body>
+    <form method="POST" action="/edit" id="edit_form">
+            <input type="hidden" name="id" value="{{ .data.ID }}" />
+            <p>名前： <input type="text" name="name" value="{{.data.Name}}" /></p>
+        </form>
+    <p>
+        <button type="submit" form="edit_form">更新</button>
+    </p>
+</body>
+</html>

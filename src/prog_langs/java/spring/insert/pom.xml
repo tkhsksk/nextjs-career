@@ -1,0 +1,23 @@
+<!-- 以下を追記する -->
+
+<!-- MySQLコネクタ -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+    <scope>runtime</scope>
+</dependency>
+
+<!-- MyBatis Starter -->
+<dependency>
+    <groupId>org.mybatis.spring.boot</groupId>
+    <artifactId>mybatis-spring-boot-starter</artifactId>
+    <version>3.0.3</version>
+</dependency>
+
+<!-- Lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <scope>provided</scope>
+</dependency>
