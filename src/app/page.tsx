@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:hidden"
@@ -36,7 +36,7 @@ export default function Home() {
             {Datas.menus.map((item, j) => (
               <React.Fragment key={`group-menus-${j}`}>
                 <tr className="odd:bg-white">
-                  <td className="px-4 py-1 font-[family-name:var(--font-geist-mono)]">
+                  <td className="px-4 py-1 font-[family-name:var(--font-geist-mono)] dark:bg-slate-800">
                     <Link 
                       href={{ pathname: item.title }}
                       data-name={item.detail} // この属性はLinkには直接使えません
@@ -47,7 +47,7 @@ export default function Home() {
                       </span>
                     </Link>
                   </td>
-                  <td className="px-4 py-1">{item.detail}</td>
+                  <td className="px-4 py-1 dark:bg-slate-800">{item.detail}</td>
                 </tr>
               </React.Fragment>
             ))}
