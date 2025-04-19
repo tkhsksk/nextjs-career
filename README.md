@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 概要
+このプロジェクトは自身のキャリアについて記載するためのページです。Next.jsで作成されています。
 
-## Getting Started
+## 起動
 
-First, run the development server:
+開発環境では以下のコマンドで起動してください:
 
 ```bash
+# まずプロジェクトディレクトリへ移動
+cd /path/to/project/your-project-name
+
+# 基本はnode.jsなので以下コマンドで
 npm run dev
-# or
+# もしくは
 yarn dev
-# or
+# もしくは
 pnpm dev
-# or
+# もしくは
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+初回起動の場合は、まず以下のコマンドを実行してpackage.jsonを元に依存ライブラリをインストールしてください:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 本番
 
-## Learn More
+本番環境では以下のコマンドでビルドしてください:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# まずプロジェクトディレクトリへ移動
+cd /path/to/project/your-project-name
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 基本はnode.jsなので以下コマンドで
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ビルド後に起動してください
 
-## Deploy on Vercel
+```bash
+# すでに起動している場合
+pm2 delete all
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# pm2を利用し以下コマンドで起動
+pm2 start npm --name "nextjs-app-name" -- start
+# bashなどを利用し対象ディレクトリで実行しない場合
+pm2 start npm --name "nextjs-app-name" --cwd /path/to/project/your-project-name -- run start
+```
