@@ -15,7 +15,7 @@
         {
             "id": 3,
             "title": "python",
-            "detail": "phthonについて",
+            "detail": "pythonについて",
             "subs": ["helloWorld","calc","def","array","crud","post,get","django"]
         },
         {
