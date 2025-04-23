@@ -82,8 +82,12 @@ main {
     <main>
         <div class="mainView">
             <img class="theme-image" src="images/logo.svg">
+
             <h1>現在メンテナンス中です</h1>
             <p><span>9:00〜18:00</span>の時間帯に<br />公開しているので、再度お越しくださいませ</p>
+            <!-- <form action="mail.php" method="post">
+                <input type="submit" value="メールを送信">
+            </form> -->
         </div>
     </main>
 </body>
