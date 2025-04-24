@@ -323,7 +323,7 @@ export default function Home() {
             <p className="font-semibold">実行結果</p>
             <Image
               className="mb-3 border"
-              src={'/go/insert1.png'}
+              src={'/swift/login.png'}
               alt="success"
               width={280}
               height={38}
@@ -356,7 +356,7 @@ export default function Home() {
             <p className="font-semibold">実行結果</p>
             <Image
               className="mb-3 border"
-              src={'/go/insert1.png'}
+              src={'/swift/login.png'}
               alt="success"
               width={280}
               height={38}

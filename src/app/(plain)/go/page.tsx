@@ -5,6 +5,7 @@ import Image from "next/image"
 import Github from '@components/github';
 import Syhl from '@components/code';
 import Syntax from '@components/syntax';
+import Caution from '@components/caution';
 
 export const metadata: Metadata = {
    title: 'go｜'+process.env.SITE_TITLE,
@@ -1177,6 +1178,7 @@ export default function Home() {
             各自ローカルのターミナルなどでコマンド実行することで動作確認ができます</p>
 
             <p className="font-semibold mb-3">ユーザー登録API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1220,6 +1222,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">管理者登録API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1261,6 +1264,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">ユーザーログインAPI</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1303,6 +1307,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">管理者ログインAPI</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1345,6 +1350,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">ポストAPI</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1387,6 +1393,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">ユーザー一覧取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1429,6 +1436,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">ユーザー取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1471,6 +1479,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">セッション一覧取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
@@ -1513,6 +1522,7 @@ export default function Home() {
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">セッション取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                     <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
