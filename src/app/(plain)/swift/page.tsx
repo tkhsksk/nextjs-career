@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-// import Link  from 'next/link'
+import Link  from 'next/link'
 import Image from "next/image"
-// import Github from '@components/github';
+import Github from '@components/github';
 import Syhl from '@components/code';
 import Syntax from '@components/syntax';
 
@@ -21,13 +21,13 @@ export default function Home() {
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
       <Image
-              className="mb-3 mx-auto"
-              src={'/swift/swift.png'}
-              alt="gin-logo"
-              width={58}
-              height={58}
-              priority
-            />
+        className="mb-3 mx-auto"
+        src={'/swift/swift.png'}
+        alt="gin-logo"
+        width={58}
+        height={58}
+        priority
+      />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">swift</span><span className="text-md">について</span></h1>
       <p className="leading-7">本項目では{WrapCode('swift')}の書き方について、基本から応用までを学習します。</p>
       
@@ -244,9 +244,7 @@ export default function Home() {
 
          <div className="p-5 border-l-2 pe-0 sm:pe-5">
             <h3 className="text-lg font-semibold mb-3">配列</h3>
-            <p className="leading-7 mb-3">この配列について、{WrapCode('swift')}の学習上でつまづきました<br />
-            そもそもなぜ配列が必要なのか？について的確に解説をしているサイトも参考書もなかったからです<br />
-            自分が学習上で学び、配列の有効性について独自解釈しましたのでそれを以下に記載します</p>
+            <p className="leading-7 mb-3">配列についての概念は認識しているため、以下に記載します</p>
             <p className="font-semibold">forで配列を回す</p>
             <Syhl
                lang='swift'
@@ -292,6 +290,84 @@ export default function Home() {
                lang='sh'
                path='swift/search.sh'
             />
+
+         </div>
+
+      </section>
+
+      <section id="ios">
+      <Image
+           className="mb-3 mx-auto"
+           src={'/swift/xcode.png'}
+           alt="gin-logo"
+           width={68}
+           height={68}
+           priority
+         />
+         <h2 className="text-2xl font-semibold mb-3">XcodeによるiOSアプリの作成</h2>
+         <p className="leading-7 mb-3">iOSにてアプリを作成する場合にはswiftを用い、なおかつdbの操作をするためにはapiによるdb操作が必要となる<br />
+         <Link className="" href="/go#echo" target="_blank">echoによるRESTfulAPI</Link>で作成したapiを利用して、iOS画面を作成しながらapi操作をするUIを作成する</p>
+
+         <Github url="swift-app/blob/develop/echo-api" />
+
+         <div className="p-5 border-l-2 pe-0 sm:pe-5">
+            <h3 className="text-lg font-semibold mb-3">Viewの設定</h3>
+            <p className="leading-7 mb-3">アプリに画面を表示させるためにはviewディレクトリに該当のファイルを設置します</p>
+            <Github url="swift-app/blob/develop/echo-api/Views" />
+            <p className="leading-7 mb-3">ログイン前の時点ではログイン画面を表示させる必要があるので<br />
+            フォーム画面を表示させるコードを作成します</p>
+            <Syhl
+               lang='swift'
+               file='LoginView.swift'
+            />
+            <p className="font-semibold">実行結果</p>
+            <Image
+              className="mb-3 border"
+              src={'/go/insert1.png'}
+              alt="success"
+              width={280}
+              height={38}
+              priority
+            />
+
+            <hr className="my-5" />
+
+            <h3 className="text-lg font-semibold mb-3">ログインセッションの保存</h3>
+            <p className="leading-7 mb-3">無事ログインができたら、セッションが返されるので<br />
+            このセッションをアプリ内に保存する必要があります<br />
+            同時にログアウト時にはセッションを破棄する記述も必要です</p>
+            <Github url="swift-app/blob/develop/echo-api/Utilities/SessionManager.swift" />
+            <Syhl
+               lang='swift'
+               file='SessionManager.swift'
+            />
+
+            <hr className="my-5" />
+
+            <h3 className="text-lg font-semibold mb-3">APIの取得とコントロール</h3>
+            <p className="leading-7 mb-3">保存する機構は作成しましたが、実際にAPIにフォーム内容を送信し、戻り値を取得するための記述が必要です</p>
+            <Github url="swift-app/blob/develop/echo-api/Services/APIService.swift" />
+
+            <Syhl
+               lang='swift'
+               file='APIService.swift'
+            />
+
+            <p className="font-semibold">実行結果</p>
+            <Image
+              className="mb-3 border"
+              src={'/go/insert1.png'}
+              alt="success"
+              width={280}
+              height={38}
+              priority
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">iOSまとめ</p>
+            <p className="leading-7 mb-3">ここまではとりあえずユーザーを確認し、ログインできたらページをHome画面を表示させることはできましたが<br />
+            実際のUIとしてはまだ不完全なため、デザインについての学習を進めていきたいと思います。</p>
 
          </div>
 

@@ -988,7 +988,7 @@ export default function Home() {
 
          <h2 className="text-2xl font-semibold mb-3">echo</h2>
          <p className="leading-7 mb-3">次にgoの代表的なワイヤーフレーム{WrapCode('echo')}を習得します<br />
-         CRUDを作成し、RESTfulなAPIを作成するまで進めます</p>
+         CRUDを作成し、{WrapCode('RESTful API')}を作成するまで進めます</p>
 
          <div className="p-5 border-l-2 pe-0 sm:pe-5">
             <p className="font-semibold mb-3">環境構築</p>

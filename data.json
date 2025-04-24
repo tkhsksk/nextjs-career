@@ -34,7 +34,7 @@
             "id": 6,
             "title": "swift",
             "detail": "swiftについて",
-            "subs": ["helloWorld","calc","func,class","array"]
+            "subs": ["helloWorld","calc","func,class","array","ios"]
         },
         {
             "id": 7,
