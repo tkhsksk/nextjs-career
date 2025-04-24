@@ -19,6 +19,14 @@ export default function Home() {
    return (
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
+      <Image
+              className="mb-3 mx-auto"
+              src={'/php/php.svg'}
+              alt="gin-logo"
+              width={100}
+              height={38}
+              priority
+            />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">php</span><span className="text-md">について</span></h1>
       <p>本項目ではphpの書き方について、基本から応用までを学習し、<br />最終はフレームワーク{WrapCode('laravel')}にて基本動作を作成するまでの経緯です</p>
       
@@ -40,6 +48,7 @@ export default function Home() {
       </div>
 
       <section id="helloWorld">
+
          <h2 className="text-2xl font-semibold mb-3">Hello World、変数</h2>
          <p className="leading-7 mb-3">文字列としてHello Worldの出力、変数への代入について記述します</p>
 
@@ -427,7 +436,7 @@ export default function Home() {
       <Image
               className="mb-3 mx-auto"
               src={'/php/laravel.svg'}
-              alt="success"
+              alt="gin-logo"
               width={60}
               height={38}
               priority
@@ -442,7 +451,7 @@ export default function Home() {
                <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
                   <div className="items-center justify-center dark:bg-gray-800">
                      <div className="relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden bg-slate-200">
-                         <p className="font-semibold mb-3 text-cyan-950">実際に作成したlaravel環境</p>
+                         <p className="font-semibold mb-3 text-cyan-950">(現在停止中)実際に作成したlaravel環境</p>
                          <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                          <tbody className="dark:text-gray-600">
                          <tr>
@@ -493,7 +502,8 @@ export default function Home() {
             前職では勤怠管理システムや、有料の社員管理システムを保持しておらず、退社時刻を紙に記載し、それをスプレッドシートに打ち込むというアナログな作業について<br />
             代表を除く、全社員が懸念を示していたことがきっかけです<br /><br />
             私はこの現状を見かねて、自身の尽くせる技術を全て尽くし、<br />
-            退社前にせめてもの謝礼としてこのコンテンツ（以下、{WrapCode('ララワークス')}）を残そうと決心しました</p>
+            退社前にせめてもの謝礼としてこのコンテンツ（以下、{WrapCode('ララワークス')}）を残そうと決心しました<br />
+            以下ソースは前職に許可を得て掲載しています</p>
          </div>
 
          <hr className="my-5" />
@@ -674,7 +684,7 @@ export default function Home() {
             />
 
             <p className="leading-7 mb-3">さらに、国民の祝日はapiから取得し、社内休業日はコンフィグより設定できるようになっています<br />
-            https://laravel.ksk318.me/config<br />
+            <span className="line-through">https://laravel.ksk318.me/config</span><br />
             例に示した記述をすれば、配列を読み取って休日としてカレンダーに表記されます</p>
 
             <hr className="my-5" />
@@ -725,7 +735,7 @@ export default function Home() {
             <p className="leading-7 mb-3">マニュアルはページ上で表示されるためidを取得して詳細表示されますが、<br />
             faqはモーダルのため、詳細表示できませんでした<br />
             そのため、faqではパラメータを取得して、該当のfaqを取得する機能を追加しました<br />
-            https://laravel.ksk318.me/faq?pw-faq=1</p>
+            <span className="line-through">https://laravel.ksk318.me/faq?pw-faq=1</span></p>
             <Image
               className="mb-3 border"
               src={'/php/09.png'}
@@ -771,7 +781,7 @@ export default function Home() {
 
             <p className="font-semibold mb-3">9.シフトの集計</p>
             <p className="leading-7 mb-3">シフトを月間の範囲で集計できる機能があります<br />
-            https://laravel.ksk318.me/shift/total<br /><br />
+            <span className="line-through">https://laravel.ksk318.me/shift/total</span><br /><br />
             細かいシフト計算はモデルで計算し、コントローラー側の計算を元に配列にして集計してます<br />
             また、集計の条件をチェックボックスで複数選択できるようにし、特定のユーザー（従業員）のみ集計できます<br />
             以下はシフト計算したものを再度配列化して集計している部分の抜粋です</p>
@@ -837,7 +847,7 @@ export default function Home() {
             <p className="leading-7 mb-5">ユーザビリティに配慮したUXを心がけて制作を進めましたが、他者にテストを行ってもらったところ、<br />
             早速デザイン面で分かりにくいという部分が出てきました<br />
             シフト申請をする画面を以下のurlにしていましたが<br />
-            https://laravel.ksk318.me/shift/edit<br />
+            <span className="line-through">https://laravel.ksk318.me/shift/edit</span><br />
             この画面上でどのようにシフトを登録すれば良いのか？また時間も設定する面倒であるなど、いろいろな意見がありました<br />
             これらの意見を受け止め、より分かりやすくするために、ある程度固定されているシフトの期間を候補として3件登録しました</p>
 

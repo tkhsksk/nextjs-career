@@ -19,6 +19,14 @@ export default function Home() {
    return (
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
+      <Image
+              className="mb-3 mx-auto"
+              src={'/java/java.png'}
+              alt="gin-logo"
+              width={68}
+              height={68}
+              priority
+            />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">java</span><span className="text-md">について</span></h1>
       <p>本項目ではJavaの書き方について、基本から応用までを学習し、<br />最終はフレームワーク{WrapCode('spring boot')}にて基本動作を作成するまでの経緯です</p>
       

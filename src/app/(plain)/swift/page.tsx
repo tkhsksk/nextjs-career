@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 // import Link  from 'next/link'
-// import Image from "next/image"
+import Image from "next/image"
 // import Github from '@components/github';
 import Syhl from '@components/code';
+import Syntax from '@components/syntax';
 
 export const metadata: Metadata = {
    title: 'swift｜'+process.env.SITE_TITLE,
@@ -19,6 +20,14 @@ export default function Home() {
    return (
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
+      <Image
+              className="mb-3 mx-auto"
+              src={'/swift/swift.png'}
+              alt="gin-logo"
+              width={58}
+              height={58}
+              priority
+            />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">swift</span><span className="text-md">について</span></h1>
       <p className="leading-7">本項目では{WrapCode('swift')}の書き方について、基本から応用までを学習します。</p>
       
@@ -279,9 +288,9 @@ export default function Home() {
             {WrapCode('swift')}を深く学ぶまで配列の利点はわかりにくいものですが、<br />
             実務で利用するにあたり、検索や繰り返しの処理で重要な役割を果たしていることに気づきました</p>
             <p className="font-semibold">実行結果</p>
-            <Syhl
+            <Syntax
                lang='sh'
-               file='swift/search.sh'
+               path='swift/search.sh'
             />
 
          </div>

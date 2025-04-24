@@ -4,6 +4,7 @@ import Link  from 'next/link'
 import Image from "next/image"
 import Github from '@components/github';
 import Syhl from '@components/code';
+import Syntax from '@components/syntax';
 
 export const metadata: Metadata = {
    title: 'go｜'+process.env.SITE_TITLE,
@@ -19,6 +20,14 @@ export default function Home() {
    return (
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
+      <Image
+              className="mb-3 mx-auto"
+              src={'/go/gopher.svg'}
+              alt="gopher"
+              width={44}
+              height={44}
+              priority
+            />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">go</span><span className="text-md">について</span></h1>
       <p className="leading-7">本項目ではphpの書き方について、基本から応用までを学習し、<br />最終はフレームワーク{WrapCode('gin')}にて基本動作を作成するまでの経緯です</p>
       
@@ -448,9 +457,9 @@ export default function Home() {
             <p className="font-semibold mb-3">環境構築</p>
             <p className="leading-7 mb-3">まずはサーバー側に接続して、<br />
             goモジュールの設定とginのインストールをします</p>
-            <Syhl
-               lang='go'
-               file='gin/ec2/install.sh'
+            <Syntax
+               lang='sh'
+               path='go/gin/ec2/install.sh'
             />
             <p className="leading-7 mb-3">インストールが完了したら、{WrapCode('git環境')}を構築してlocalにcloneしましょう<br />
             次の項目からlocal(macOS上)で実行します</p>
@@ -460,7 +469,7 @@ export default function Home() {
                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
                         <div className="items-center justify-center dark:bg-gray-800">
                             <div className="relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden bg-slate-200">
-                                <p className="font-semibold mb-3 text-cyan-950">実際に作成したgin環境</p>
+                                <p className="font-semibold mb-3 text-cyan-950">(現在停止中)実際に作成したgin環境</p>
                                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
                                 <tbody className="dark:text-gray-600">
                                 <tr>
@@ -962,6 +971,594 @@ export default function Home() {
             カスタマイズしやすいフレームワークでした<br /><br />
             MVCをゼロから、というとSpring Bootのような難しさがあると思われがちですが、Spring Bootのようなモジュールのバージョン問題などもなく、<br />
             そもそもgo自体がシンプルな記述なので、難易度もそこまでで、尚且つ管理しやすかったです</p>
+         </div>
+
+      </section>
+
+      <section id="echo">
+
+      <Image
+              className="mb-3 mx-auto"
+              src={'/go/echo.png'}
+              alt="success"
+              width={60}
+              height={38}
+              priority
+            />
+
+         <h2 className="text-2xl font-semibold mb-3">echo</h2>
+         <p className="leading-7 mb-3">次にgoの代表的なワイヤーフレーム{WrapCode('echo')}を習得します<br />
+         CRUDを作成し、RESTfulなAPIを作成するまで進めます</p>
+
+         <div className="p-5 border-l-2 pe-0 sm:pe-5">
+            <p className="font-semibold mb-3">環境構築</p>
+            <p className="leading-7 mb-3">まずはサーバー側に接続して、<br />
+            goモジュールの設定とginのインストールをします</p>
+            <Syntax
+               lang='go'
+               path='go/echo/install.sh'
+            />
+            <p className="leading-7 mb-3">インストールが完了したら、{WrapCode('git環境')}を構築してlocalにcloneしましょう<br />
+            次の項目からlocal(macOS上)で実行します</p>
+
+            <div className="w-full mb-3">
+                <div className="p-4">
+                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+                        <div className="items-center justify-center dark:bg-gray-800">
+                            <div className="relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden bg-slate-200">
+                                <p className="font-semibold mb-3 text-cyan-950">実際に作成したecho環境</p>
+                                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                                <tbody className="dark:text-gray-600">
+                                <tr>
+                                   <th className="pr-4 break-all">url</th><td><Link href="https://api.ksk318.me/" target="_blank">https://api.ksk318.me/</Link></td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div className="items-center justify-center dark:bg-gray-800">
+                            <div className="relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden bg-slate-200">
+                                <Image
+                                  className="mb-5 mx-auto"
+                                  src={'/GitHub_Lockup_Dark.svg'}
+                                  alt="success"
+                                  width={120}
+                                  height={38}
+                                  priority
+                                />
+                                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                                <tbody className="dark:text-gray-600">
+                                <tr>
+                                    <th className="pr-4 break-all">url</th><td><Link href="https://github.com/tkhsksk/echo-api" target="_blank">https://github.com/tkhsksk/echo-api</Link></td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ページ表示</p>
+            <p className="leading-7 mb-3">{WrapCode('main.go')}ファイルにルーティングとページファイルのパスを記述をすると<br />
+            ページ表示できます<br />
+            基本的なページは{WrapCode('handler')}に記述し、ページを表示させるルーティングを<br />
+            {WrapCode('main.go')}にすべて記述しています<br />
+            urlのルートのみ{WrapCode('main.go')}に記載しています</p>
+
+            <div className="break-all relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden w-fit bg-slate-200">
+                <p className="font-semibold mb-3 text-cyan-950">編集対象ファイル</p>
+                <ul className="dark:text-gray-600">
+                    <li>main.go</li>
+                    <li>templates/index.html</li>
+                </ul>
+            </div>
+
+            <Syhl
+               lang='go'
+               file='echo/main.go'
+            />
+            <Github url="echo-api/blob/develop/main.go" />
+            <p className="leading-7">対象のページファイルは通常のhtmlファイル構成と同じ記述で大丈夫です</p>
+            <Syhl
+               lang='go'
+               file='echo/index.html'
+            />
+            <Github url="echo-api/blob/develop/templates/index.html" />
+            <p className="leading-7 mb-3">ここまで編集を終えたら{WrapCode('go run /path/to/your-project-directory/main.go')}を実行します</p>
+
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/" target="_blank">http://localhost:4207/</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/" target="_blank">https://api.ksk318.me/</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <Image
+              className="mb-3 border"
+              src={'/go/index.png'}
+              alt="success"
+              width={280}
+              height={38}
+              priority
+            />
+            <p className="leading-7">ページ表示が確認できました</p>
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">データ登録</p>
+            <p className="leading-7 mb-3">例によって、dbの作成が必要になるので<br />
+            README.mdの情報をもとにdbを作成した上で、.envファイルを記述し<br />
+            その後以下のようにdbと接続します</p>
+            <Syhl
+               lang='go'
+               file='echo/db.go'
+            />
+            <p className="leading-7">データ登録のシステムを構築するにあたってMVCをわかりやすくしたいので<br />
+            各ディレクトリに役割を分担させて、構成します<br />
+            先ほどmain.goに作成したトップページ以外のapi処理は、handler/*に分けました</p>
+            <Syntax
+               lang='go'
+               path='go/echo/handler.sh'
+            />
+
+            <div className="break-all relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden w-fit bg-slate-200">
+                <p className="font-semibold mb-3 text-cyan-950">編集対象ファイル</p>
+                <ul className="dark:text-gray-600">
+                  <li>db/db.go</li>
+                    <li>main.go</li>
+                    <li>handler/*</li>
+                    <li>model/*</li>
+                </ul>
+            </div>
+            
+            <p className="leading-7">handlerの記述です<br />
+            いくつかページ表示用のhandlerがありますが<br />
+            データ登録用のapiを例に取り上げて解説します</p>
+            <Syhl
+               lang='go'
+               file='echo/post.go'
+            />
+            <Github url="echo-api/blob/develop/handlers/post.go" />
+
+            <p className="leading-7 mb-3">データ登録にはCreatePostを使用しています<br />
+            postされた内容をReq構造体に登録し、postのテーブルに構造体のデータを登録しています</p>
+            <p className="leading-7">ユーザーのモデルは以下のような構成です</p>
+
+            <Syhl
+               lang='go'
+               file='echo/user.go'
+            />
+            <Github url="echo-api/blob/develop/models/user.go" />
+            
+            <p className="leading-7 mb-3">ここまで編集を終えたら{WrapCode('go run /path/to/your-project-directory/main.go')}を実行します<br />
+            以下より記述する各種apiを実行してみましょう</p>
+
+            <hr className="my-5" />
+
+            <Image
+              className="mb-5 mx-auto pt-3"
+              src={'/go/api.png'}
+              alt="api"
+              width={54}
+              height={54}
+              priority
+            />
+
+            <p className="leading-7 mb-3">README.mdにも記述がありますが、以下よりapiの解説をします<br />
+            各自ローカルのターミナルなどでコマンド実行することで動作確認ができます</p>
+
+            <p className="font-semibold mb-3">ユーザー登録API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/user/register" target="_blank">http://localhost:8090/user/register</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/user/register" target="_blank">https://api.ksk318.me/user/register</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p className="leading-7 mb-3">README.mdにも記述がありますが、以下よりapiの解説をします<br />
+            各自ローカルのターミナルなどで以下を実行するとユーザー登録が可能です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/user_register.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">管理者登録API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/admin/register" target="_blank">http://localhost:8090/admin/register</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/admin/register" target="_blank">https://api.ksk318.me/admin/register</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行すると管理者登録が可能です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/admin_register.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ユーザーログインAPI</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/user/login" target="_blank">http://localhost:8090/user/login</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/user/login" target="_blank">https://api.ksk318.me/user/login</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとユーザーログインが可能です<br />
+            ログインと同時にjsonでログインセッションが戻り値で取得できます</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/user_login.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">管理者ログインAPI</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/admin/login" target="_blank">http://localhost:8090/admin/login</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/admin/login" target="_blank">https://api.ksk318.me/admin/login</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行すると管理者ログインが可能です<br />
+            ログインと同時にjsonでログインセッションが戻り値で取得できます</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/admin_login.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ポストAPI</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/post" target="_blank">http://localhost:8090/post</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/post" target="_blank">https://api.ksk318.me/post</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとポストの投稿が可能です<br />
+            ユーザーログイン時のセッションが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/post.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ユーザー一覧取得API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/users" target="_blank">http://localhost:8090/users</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/users" target="_blank">https://api.ksk318.me/users</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとユーザー一覧の取得が可能です<br />
+            取得には管理者ログイン時のセッションIDが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/user_list.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ユーザー取得API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/users/{id}" target="_blank">http://localhost:8090/user/:id</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/users/{id}" target="_blank">https://api.ksk318.me/user/:id</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとユーザー情報をidから取得が可能です<br />
+            取得には管理者ログイン時のセッションIDが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/user.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">セッション一覧取得API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/users/sessions" target="_blank">http://localhost:8090/users/sessions</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/users/sessions" target="_blank">https://api.ksk318.me/users/sessions</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとユーザーセッションの一覧取得が可能です<br />
+            取得には管理者ログイン時のセッションIDが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/session.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">セッション取得API</p>
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:8090/users/sessions/{id}" target="_blank">http://localhost:8090/users/sessions/:id</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/users/sessions/{id}" target="_blank">https://api.ksk318.me/users/sessions/:id</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとセッションIDをユーザーidから取得可能です<br />
+            取得には管理者ログイン時のセッションIDが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/session_byid.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">echoまとめ</p>
+            <p className="leading-7 mb-3">ginと同じくMVCをゼロから作成する手間はありますが、ginよりもさらにわかりやすく、<br />
+            カスタマイズしやすいフレームワークというイメージでした<br /><br />
+            apiを作成するのに高速且つ軽量なフレームワークということ、さらにecho用のモジュールも豊富に取り揃えてあるためカスタマイズのし甲斐があるフレームワークでした<br />
+            さらにこのapiを用いてiOSのアプリをswiftで作成したため、こちらも併せてご覧ください</p>
          </div>
 
       </section>

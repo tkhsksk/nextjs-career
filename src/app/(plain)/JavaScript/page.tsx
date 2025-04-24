@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import Syhl from '@components/code';
+import Image from "next/image"
 
 export const metadata: Metadata = {
    title: 'JavaScript｜'+process.env.SITE_TITLE,
@@ -16,6 +17,14 @@ export default function Home() {
    return (
     <div className="sm:col-span-3 col-span-4 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-3 pb-20 sm:p-10 font-[family-name:var(--font-geist-sans)] z-10 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-slate-800">
       <main className="flex flex-col gap-8 row-start-2 items-start w-full">
+      <Image
+              className="mb-3 mx-auto"
+              src={'/js/js.png'}
+              alt="gopher"
+              width={50}
+              height={50}
+              priority
+            />
       <h1 className="flex items-end"><span className="font-semibold text-3xl mr-2">JavaScript</span><span className="text-md">について</span></h1>
       <p>本項目ではJavaScriptの書き方について、基本のみを学習し、<br />
       主に本サイトで利用している{WrapCode('next.js')}についての説明をしていきます</p>
