@@ -320,9 +320,9 @@ export default function Home() {
                lang='swift'
                file='LoginView.swift'
             />
-            <p className="font-semibold">実行結果</p>
+            <p className="font-semibold mb-3">実行結果</p>
             <Image
-              className="mb-3 border"
+              className="mb-3 shadow-lg rounded-2xl"
               src={'/swift/login.png'}
               alt="success"
               width={280}
@@ -353,10 +353,10 @@ export default function Home() {
                file='APIService.swift'
             />
 
-            <p className="font-semibold">実行結果</p>
+            <p className="font-semibold mb-3">実行結果</p>
             <Image
-              className="mb-3 border"
-              src={'/swift/login.png'}
+              className="mb-3 shadow-lg rounded-2xl"
+              src={'/swift/logined.png'}
               alt="success"
               width={280}
               height={38}
@@ -364,6 +364,53 @@ export default function Home() {
             />
 
             <hr className="my-5" />
+
+            <h3 className="text-lg font-semibold mb-3">アラート表示</h3>
+            <p className="leading-7 mb-3">現時点でログインエラーとログインごのセッション表示はテキストとして表示されるようにしていますが<br />
+            このままだとUIとしてあまり見易くないため<br />
+            これをアラート表示させるようにします<br />
+            ログインに失敗した場合はエラー表示をするために、.alertを利用して作成します</p>
+            <Github url="swift-app/blob/develop/echo-api/Views/LoginView.swift" />
+
+            <Syhl
+               lang='swift'
+               file='alert/LoginView.swift'
+            />
+
+            <p className="font-semibold mb-3">実行結果</p>
+            <Image
+              className="mb-3 shadow-lg rounded-2xl"
+              src={'/swift/login_failed.png'}
+              alt="success"
+              width={280}
+              height={38}
+              priority
+            />
+
+            <hr className="my-5" />
+
+            <p className="leading-7 mb-3">ログイン時のセッション表示はkeychainに保存されるため本来必要ないですが<br />
+            動作確認としてログイン後のアラートで表示されるようにします<br />
+            取得確認後にアラート表示させたいため、.onAppear、且つif let sessionID = session.sessionIDでalertをtrueにする必要があります</p>
+            <Github url="swift-app/blob/develop/echo-api/Views/HomeView.swift" />
+
+            <Syhl
+               lang='swift'
+               file='alert/HomeView.swift'
+            />
+
+            <p className="font-semibold mb-3">実行結果</p>
+            <Image
+              className="mb-3 shadow-lg rounded-2xl"
+              src={'/swift/logined_session.png'}
+              alt="success"
+              width={280}
+              height={38}
+              priority
+            />
+
+            <hr className="my-5" />
+
 
             <p className="font-semibold mb-3">iOSまとめ</p>
             <p className="leading-7 mb-3">ここまではとりあえずユーザーを確認し、ログインできたらページをHome画面を表示させることはできましたが<br />
