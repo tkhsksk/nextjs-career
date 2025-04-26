@@ -1197,7 +1197,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/user/register" target="_blank">http://localhost:8090/user/register</Link>
+                                <Link href="http://localhost:8090/auth/user/register" target="_blank">http://localhost:8090/auth/user/register</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1205,7 +1205,7 @@ export default function Home() {
                                 UbuntuServer 24.04.2 LTS
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/user/register" target="_blank">https://api.ksk318.me/user/register</Link>
+                                <Link href="https://api.ksk318.me/auth/user/register" target="_blank">https://api.ksk318.me/auth/user/register</Link>
                             </td>
                         </tr>
                     </tbody>
@@ -1241,7 +1241,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/admin/register" target="_blank">http://localhost:8090/admin/register</Link>
+                                <Link href="http://localhost:8090/auth/admin/register" target="_blank">http://localhost:8090/auth/admin/register</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1249,7 +1249,7 @@ export default function Home() {
                                 UbuntuServer 24.04.2 LTS
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/admin/register" target="_blank">https://api.ksk318.me/admin/register</Link>
+                                <Link href="https://api.ksk318.me/auth/admin/register" target="_blank">https://api.ksk318.me/auth/admin/register</Link>
                             </td>
                         </tr>
                     </tbody>
@@ -1283,7 +1283,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/user/login" target="_blank">http://localhost:8090/user/login</Link>
+                                <Link href="http://localhost:8090/auth/user/login" target="_blank">http://localhost:8090/auth/user/login</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1291,7 +1291,7 @@ export default function Home() {
                                 UbuntuServer 24.04.2 LTS
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/user/login" target="_blank">https://api.ksk318.me/user/login</Link>
+                                <Link href="https://api.ksk318.me/auth/user/login" target="_blank">https://api.ksk318.me/auth/user/login</Link>
                             </td>
                         </tr>
                     </tbody>
@@ -1326,7 +1326,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/admin/login" target="_blank">http://localhost:8090/admin/login</Link>
+                                <Link href="http://localhost:8090/auth/admin/login" target="_blank">http://localhost:8090/auth/admin/login</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1334,7 +1334,7 @@ export default function Home() {
                                 UbuntuServer 24.04.2 LTS
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/admin/login" target="_blank">https://api.ksk318.me/admin/login</Link>
+                                <Link href="https://api.ksk318.me/auth/admin/login" target="_blank">https://api.ksk318.me/auth/admin/login</Link>
                             </td>
                         </tr>
                     </tbody>
