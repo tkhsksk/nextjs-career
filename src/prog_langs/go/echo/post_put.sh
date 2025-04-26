@@ -1,10 +1,10 @@
 # ポストの登録
-curl -X POST https://api.ksk318.me/posts \
+curl -X PUT https://api.ksk318.me/posts \
 -H "Content-Type: application/json" \
 -H "Session-ID: [ユーザーセッション]" \
 -d '{
-	"title": "テスト投稿",
-	"content": "これはテスト投稿の内容です"
+	"title": "テスト投稿edit",
+	"content": "これはテスト投稿の内容ですedit"
 }'
 
 # 成功時の戻り値

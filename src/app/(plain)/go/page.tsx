@@ -556,7 +556,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/" target="_blank">http://localhost:8090/</Link>
+                                <Link href="http://localhost:4207/" target="_blank">http://localhost:4207/</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -676,7 +676,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/user/" target="_blank">http://localhost:8090/user/</Link>
+                                <Link href="http://localhost:4207/user/" target="_blank">http://localhost:4207/user/</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -761,7 +761,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/user/" target="_blank">http://localhost:8090/user/</Link>
+                                <Link href="http://localhost:4207/user/" target="_blank">http://localhost:4207/user/</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -842,7 +842,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/edit/1" target="_blank">http://localhost:8090/edit/1</Link>
+                                <Link href="http://localhost:4207/edit/1" target="_blank">http://localhost:4207/edit/1</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -940,7 +940,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/search/" target="_blank">http://localhost:8090/search/</Link>
+                                <Link href="http://localhost:4207/search/" target="_blank">http://localhost:4207/search/</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1088,7 +1088,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/" target="_blank">http://localhost:4207/</Link>
+                                <Link href="http://localhost:4207/" target="_blank">http://localhost:4207/</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1197,7 +1197,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/auth/user/register" target="_blank">http://localhost:8090/auth/user/register</Link>
+                                <Link href="http://localhost:4207/auth/user/register" target="_blank">http://localhost:4207/auth/user/register</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1241,7 +1241,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/auth/admin/register" target="_blank">http://localhost:8090/auth/admin/register</Link>
+                                <Link href="http://localhost:4207/auth/admin/register" target="_blank">http://localhost:4207/auth/admin/register</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1283,7 +1283,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/auth/user/login" target="_blank">http://localhost:8090/auth/user/login</Link>
+                                <Link href="http://localhost:4207/auth/user/login" target="_blank">http://localhost:4207/auth/user/login</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1326,7 +1326,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/auth/admin/login" target="_blank">http://localhost:8090/auth/admin/login</Link>
+                                <Link href="http://localhost:4207/auth/admin/login" target="_blank">http://localhost:4207/auth/admin/login</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1349,7 +1349,7 @@ export default function Home() {
 
             <hr className="my-5" />
 
-            <p className="font-semibold mb-3">ポストAPI</p>
+            <p className="font-semibold mb-3">ポスト作成API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
                 <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
@@ -1369,7 +1369,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/post" target="_blank">http://localhost:8090/post</Link>
+                                <Link href="http://localhost:4207/posts" target="_blank">http://localhost:4207/posts</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1377,7 +1377,7 @@ export default function Home() {
                                 UbuntuServer 24.04.2 LTS
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/post" target="_blank">https://api.ksk318.me/post</Link>
+                                <Link href="https://api.ksk318.me/posts" target="_blank">https://api.ksk318.me/posts</Link>
                             </td>
                         </tr>
                     </tbody>
@@ -1388,6 +1388,135 @@ export default function Home() {
             <Syntax
                 lang='sh'
                 path='go/echo/post.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ポスト更新API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:4207/posts/:id" target="_blank">http://localhost:4207/posts/:id</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/posts/:id" target="_blank">https://api.ksk318.me/posts/:id</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行するとポストの更新が可能です<br />
+            ユーザーログイン時のセッションが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/post_put.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ポスト取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:4207/posts" target="_blank">http://localhost:4207/posts</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/posts" target="_blank">https://api.ksk318.me/posts</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行すると自身が作成したポストの一覧取得が可能です<br />
+            ユーザーログイン時のセッションが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/post_get.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ポスト個別取得API</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
+            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
+                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
+                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="px-6 py-3">
+                                環境名(環境)
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                確認用URL
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                local(Mac OS)
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="http://localhost:4207/posts/:id" target="_blank">http://localhost:4207/posts/:id</Link>
+                            </td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                UbuntuServer 24.04.2 LTS
+                            </th>
+                            <td className="px-6 py-4">
+                                <Link href="https://api.ksk318.me/posts/:id" target="_blank">https://api.ksk318.me/posts/:id</Link>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p className="leading-7 mb-3">以下を実行すると自身が作成したポストの個別取得が可能です<br />
+            ユーザーログイン時のセッションが必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/post_get_byid.sh'
             />
 
             <hr className="my-5" />
@@ -1412,7 +1541,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/users" target="_blank">http://localhost:8090/users</Link>
+                                <Link href="http://localhost:4207/users" target="_blank">http://localhost:4207/users</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1455,7 +1584,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/users/{id}" target="_blank">http://localhost:8090/user/:id</Link>
+                                <Link href="http://localhost:4207/users/{id}" target="_blank">http://localhost:4207/user/:id</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1498,7 +1627,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/users/sessions" target="_blank">http://localhost:8090/users/sessions</Link>
+                                <Link href="http://localhost:4207/users/sessions" target="_blank">http://localhost:4207/users/sessions</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1541,7 +1670,7 @@ export default function Home() {
                                 local(Mac OS)
                             </th>
                             <td className="px-6 py-4">
-                                <Link href="http://localhost:8090/users/sessions/{id}" target="_blank">http://localhost:8090/users/sessions/:id</Link>
+                                <Link href="http://localhost:4207/users/sessions/{id}" target="_blank">http://localhost:4207/users/sessions/:id</Link>
                             </td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
