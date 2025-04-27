@@ -1213,7 +1213,7 @@ export default function Home() {
             </div>
 
             <p className="leading-7 mb-3">README.mdにも記述がありますが、以下よりapiの解説をします<br />
-            各自ローカルのターミナルなどで以下を実行するとユーザー登録が可能です</p>
+            各自ローカルのターミナルなどで以下を実行すると実際にユーザー登録が可能です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/user_register.sh'

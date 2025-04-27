@@ -2,6 +2,7 @@
 curl -X POST https://api.ksk318.me/user/register \
 -H "Content-Type: application/json" \
 -d '{
+	"name": "テストユーザー",
 	"email": "test@example.com",
 	"password": "password123"
 }'
