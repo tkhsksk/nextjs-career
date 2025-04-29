@@ -38,7 +38,6 @@ npm run build
 ```
 
 ビルド後に起動してください
-git test
 
 
 ```bash
@@ -50,5 +49,3 @@ pm2 start npm --name "nextjs-app-name" -- start
 # bashなどを利用し対象ディレクトリで実行しない場合
 pm2 start npm --name "nextjs-app-name" --cwd /path/to/project/your-project-name -- run start
 ```
-
-push test
