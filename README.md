@@ -38,6 +38,8 @@ npm run build
 ```
 
 ビルド後に起動してください
+git test
+
 
 ```bash
 # すでに起動している場合
