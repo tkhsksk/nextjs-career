@@ -401,7 +401,7 @@ export default function Home() {
                      />
                      <div className="mb-3 bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                         <p className="text-slate-900 dark:text-white">期間：2024年1月～2024年10月(9か月)</p>
-                        <p className="font-semibold">https://laravel.ksk318.me/{LinkMark('https://laravel.ksk318.me/')}</p>
+                        <p className="font-semibold">https://laravel.ksk318.me/(現在停止中){LinkMark('https://laravel.ksk318.me/')}</p>
                         <p className="text-slate-900 dark:text-white">構築環境：php8.3.7、laravel10.41.0、v11.5.2-MariaDB、React、tailwind CSS</p>
                      </div>
                      <p className="mb-3"><span className="font-semibold">【概要】</span><br />
