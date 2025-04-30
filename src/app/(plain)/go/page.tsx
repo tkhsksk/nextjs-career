@@ -1107,7 +1107,7 @@ export default function Home() {
               className="mb-3 border"
               src={'/go/index.png'}
               alt="success"
-              width={280}
+              width={400}
               height={38}
               priority
             />
@@ -1163,6 +1163,39 @@ export default function Home() {
             <p className="leading-7 mb-3">ここまで編集を終えたら{WrapCode('go run /path/to/your-project-directory/main.go')}を実行します<br />
             以下より記述する各種apiを実行してみましょう</p>
 
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">メールでパスコード送信</p>
+            <p className="leading-7 mb-3">現時点では誰でも管理者登録ができる状態になっています<br />
+            これを2段階認証にするために、まずパスコードのテーブルを作成します<br />
+            管理者登録と同時にパスコードを記載したメールを送信し<br />
+            パスコードが一致したら管理者をactiveにする仕組みを作ります</p>
+            <Syhl
+               lang='go'
+               file='echo/passcode.go'
+            />
+            <p className="leading-7 mb-3">関数の引数は、メールアドレス（送信先）、パスコード、管理者id、パスコードのid<br />
+            この{WrapCode('SendPasscodeMail')}を管理者登録時に実行するようにします</p>
+            <p className="leading-7 mb-3">管理者登録時のメールアドレス宛に以下のようなメールが配信されます</p>
+
+            <Image
+              className="mb-3 border"
+              src={'/go/mail.png'}
+              alt="success"
+              width={500}
+              height={38}
+              priority
+            />
+            <p className="leading-7 mb-3">メール内にはAPIを実行してくださいとありますが<br />
+            実際に運用する場合はAPIを元にフロント側で設計をする必要があります</p>
+
+            <p className="leading-7 mb-3">パスコードを送信する先のAPIは以下です</p>
+            <Syhl
+               lang='go'
+               file='echo/passcode_handler.go'
+            />
+            <p className="leading-7 mb-3">セキュリティ上、パスコードの有効期限を設けています<br />
+            管理者の有効化が確認できたら成功です</p>
             <hr className="my-5" />
 
             <Image
