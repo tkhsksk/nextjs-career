@@ -6,6 +6,7 @@ import Github from '@components/github';
 import Syhl from '@components/code';
 import Syntax from '@components/syntax';
 import Caution from '@components/caution';
+import DevProdTable from '@components/dev_prod_table';
 
 export const metadata: Metadata = {
    title: 'go｜'+process.env.SITE_TITLE,
@@ -1174,6 +1175,8 @@ export default function Home() {
                lang='go'
                file='echo/passcode.go'
             />
+            <Github url="echo-api/blob/develop/mailer/passcode.go" />
+
             <p className="leading-7 mb-3">関数の引数は、メールアドレス（送信先）、パスコード、管理者id、パスコードのid<br />
             この{WrapCode('SendPasscodeMail')}を管理者登録時に実行するようにします</p>
             <p className="leading-7 mb-3">管理者登録時のメールアドレス宛に以下のようなメールが配信されます</p>
@@ -1194,6 +1197,8 @@ export default function Home() {
                lang='go'
                file='echo/passcode_handler.go'
             />
+            <Github url="echo-api/blob/develop/handlers/passcode.go" />
+
             <p className="leading-7 mb-3">セキュリティ上、パスコードの有効期限を設けています<br />
             管理者の有効化が確認できたら成功です</p>
             <hr className="my-5" />
@@ -1207,46 +1212,24 @@ export default function Home() {
               priority
             />
 
-            <p className="leading-7 mb-3">README.mdにも記述がありますが、以下よりapiの解説をします<br />
+            <p className="leading-7 mb-3">{WrapCode('README.md')}にも記述がありますが、以下よりapiの解説をします<br />
             各自ローカルのターミナルなどでコマンド実行することで動作確認ができます</p>
 
             <p className="font-semibold mb-3">ユーザー登録API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/auth/user/register" target="_blank">http://localhost:4207/auth/user/register</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/auth/user/register" target="_blank">https://api.ksk318.me/auth/user/register</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <DevProdTable
+               id='user_register'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/auth/user/register'],
+                  ['UbuntuServer 24.04.2 LTS','/auth/user/register']
+               ]}
+            />
 
-            <p className="leading-7 mb-3">README.mdにも記述がありますが、以下よりapiの解説をします<br />
-            各自ローカルのターミナルなどで以下を実行すると実際にユーザー登録が可能です</p>
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザー登録')}が可能です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/user_register.sh'
@@ -1256,82 +1239,55 @@ export default function Home() {
 
             <p className="font-semibold mb-3">管理者登録API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/auth/admin/register" target="_blank">http://localhost:4207/auth/admin/register</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/auth/admin/register" target="_blank">https://api.ksk318.me/auth/admin/register</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行すると管理者登録が可能です</p>
+            <DevProdTable
+               id='admin_register'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/auth/admin/register'],
+                  ['UbuntuServer 24.04.2 LTS','/auth/admin/register']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('管理者登録')}が可能です<br />
+            メールアドレス宛に管理者を有効にするためのパスコードが送信されるので、<br />
+            必ず{WrapCode('受信できるアドレス')}で実行してください</p>
             <Syntax
                 lang='sh'
                 path='go/echo/admin_register.sh'
             />
+            <p className="leading-7 mb-3">成功すると以下のメールが届きます</p>
+            <Image
+              className="mb-3 shadow-lg"
+              src={'/go/mail.png'}
+              alt="success"
+              width={500}
+              height={38}
+              priority
+            />
+            <p className="leading-7 mb-3">簡易的にするため、管理者がapiを実行するような指示がメールに記載されています<br />
+            apiを実行すると管理者が有効となり、ログイン可能になります</p>
 
             <hr className="my-5" />
 
             <p className="font-semibold mb-3">ユーザーログインAPI</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/auth/user/login" target="_blank">http://localhost:4207/auth/user/login</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/auth/user/login" target="_blank">https://api.ksk318.me/auth/user/login</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとユーザーログインが可能です<br />
-            ログインと同時にjsonでログインセッションが戻り値で取得できます</p>
+            <DevProdTable
+               id='user_login'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/auth/user/login'],
+                  ['UbuntuServer 24.04.2 LTS','/auth/user/login']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザーログイン')}が可能です<br />
+            ログインと同時に{WrapCode('json')}でログインセッションが戻り値で取得できます</p>
             <Syntax
                 lang='sh'
                 path='go/echo/user_login.sh'
@@ -1341,40 +1297,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">管理者ログインAPI</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/auth/admin/login" target="_blank">http://localhost:4207/auth/admin/login</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/auth/admin/login" target="_blank">https://api.ksk318.me/auth/admin/login</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行すると管理者ログインが可能です<br />
-            ログインと同時にjsonでログインセッションが戻り値で取得できます</p>
+            <DevProdTable
+               id='admin_login'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/auth/admin/login'],
+                  ['UbuntuServer 24.04.2 LTS','/auth/admin/login']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('管理者ログイン')}が可能です<br />
+            ログインと同時に{WrapCode('json')}でログインセッションが戻り値で取得できます</p>
             <Syntax
                 lang='sh'
                 path='go/echo/admin_login.sh'
@@ -1384,40 +1320,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ポスト作成API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/posts" target="_blank">http://localhost:4207/posts</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/posts" target="_blank">https://api.ksk318.me/posts</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとポストの投稿が可能です<br />
-            ユーザーログイン時のセッションが必要です</p>
+            <DevProdTable
+               id='post_post'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/posts'],
+                  ['UbuntuServer 24.04.2 LTS','/posts']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ポストの投稿')}が可能です<br />
+            {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/post.sh'
@@ -1427,40 +1343,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ポスト更新API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/posts/:id" target="_blank">http://localhost:4207/posts/:id</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/posts/:id" target="_blank">https://api.ksk318.me/posts/:id</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとポストの更新が可能です<br />
-            ユーザーログイン時のセッションが必要です</p>
+            <DevProdTable
+               id='post_put'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/posts/:id'],
+                  ['UbuntuServer 24.04.2 LTS','/posts/:id']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ポストの更新')}が可能です<br />
+            {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/post_put.sh'
@@ -1470,38 +1366,18 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ポスト取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/posts" target="_blank">http://localhost:4207/posts</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/posts" target="_blank">https://api.ksk318.me/posts</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <DevProdTable
+               id='post_get'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/posts'],
+                  ['UbuntuServer 24.04.2 LTS','/posts']
+               ]}
+            />
+
             <p className="leading-7 mb-3">以下を実行すると自身が作成したポストの一覧取得が可能です<br />
             ユーザーログイン時のセッションが必要です</p>
             <Syntax
@@ -1513,40 +1389,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ポスト個別取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/posts/:id" target="_blank">http://localhost:4207/posts/:id</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/posts/:id" target="_blank">https://api.ksk318.me/posts/:id</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行すると自身が作成したポストの個別取得が可能です<br />
-            ユーザーログイン時のセッションが必要です</p>
+            <DevProdTable
+               id='post_get_id'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/posts/:id'],
+                  ['UbuntuServer 24.04.2 LTS','/posts/:id']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('自身が作成したポストの個別取得')}が可能です<br />
+            {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/post_get_byid.sh'
@@ -1556,40 +1412,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ユーザー一覧取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/users" target="_blank">http://localhost:4207/users</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/users" target="_blank">https://api.ksk318.me/users</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとユーザー一覧の取得が可能です<br />
-            取得には管理者ログイン時のセッションIDが必要です</p>
+            <DevProdTable
+               id='user_get'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/users'],
+                  ['UbuntuServer 24.04.2 LTS','/users']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザー一覧の取得')}が可能です<br />
+            取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/user_list.sh'
@@ -1599,40 +1435,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">ユーザー取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/users/{id}" target="_blank">http://localhost:4207/user/:id</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/users/{id}" target="_blank">https://api.ksk318.me/user/:id</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとユーザー情報をidから取得が可能です<br />
-            取得には管理者ログイン時のセッションIDが必要です</p>
+            <DevProdTable
+               id='user_get_id'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/users/:id'],
+                  ['UbuntuServer 24.04.2 LTS','/users/:id']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザー情報をidから取得')}が可能です<br />
+            取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/user.sh'
@@ -1642,40 +1458,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">セッション一覧取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/users/sessions" target="_blank">http://localhost:4207/users/sessions</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/users/sessions" target="_blank">https://api.ksk318.me/users/sessions</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとユーザーセッションの一覧取得が可能です<br />
-            取得には管理者ログイン時のセッションIDが必要です</p>
+            <DevProdTable
+               id='session'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/users/sessions'],
+                  ['UbuntuServer 24.04.2 LTS','/users/sessions']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザーセッションの一覧取得')}が可能です<br />
+            取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/session.sh'
@@ -1685,40 +1481,20 @@ export default function Home() {
 
             <p className="font-semibold mb-3">セッション取得API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
-            <div className="relative shadow-md sm:rounded-lg mb-4 grid overflow-hidden w-fit mb-5">
-                <table className="whitespace-nowrap block overflow-x-auto text-left rtl:text-right text-gray-800 dark:text-gray-400">
-                    <thead className="text-gray-900 bg-slate-200 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                環境名(環境)
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                確認用URL
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                local(Mac OS)
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="http://localhost:4207/users/sessions/{id}" target="_blank">http://localhost:4207/users/sessions/:id</Link>
-                            </td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                UbuntuServer 24.04.2 LTS
-                            </th>
-                            <td className="px-6 py-4">
-                                <Link href="https://api.ksk318.me/users/sessions/{id}" target="_blank">https://api.ksk318.me/users/sessions/:id</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p className="leading-7 mb-3">以下を実行するとセッションIDをユーザーidから取得可能です<br />
-            取得には管理者ログイン時のセッションIDが必要です</p>
+            <DevProdTable
+               id='session_id'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/users/sessions/:id'],
+                  ['UbuntuServer 24.04.2 LTS','/users/sessions/:id']
+               ]}
+            />
+
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('セッションIDをユーザーidから取得')}可能です<br />
+            取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
                 path='go/echo/session_byid.sh'
