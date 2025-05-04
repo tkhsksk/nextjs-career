@@ -10,7 +10,15 @@
             "id": 2,
             "title": "php",
             "detail": "phpについて",
-            "subs": ["helloWorld","calc","function","array","crud","post,get","laravel"]
+            "subs": [
+                "helloWorld",
+                "calc",
+                "function",
+                "array",
+                "crud",
+                "post,get",
+                "laravel"
+            ]
         },
         {
             "id": 3,
@@ -28,7 +36,16 @@
             "id": 5,
             "title": "go",
             "detail": "goについて",
-            "subs": ["helloWorld","calc","func,struct","array","crud","post,get","gin","echo"]
+            "subs": [
+                "helloWorld",
+                "calc",
+                "func,struct",
+                "array",
+                "crud",
+                "post,get",
+                "gin",
+                "echo"
+            ]
         },
         {
             "id": 6,

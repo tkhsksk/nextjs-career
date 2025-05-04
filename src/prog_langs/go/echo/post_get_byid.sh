@@ -1,7 +1,6 @@
 # ポストの登録
-curl -X GET https://api.ksk318.me/posts/{id} \
+curl -X GET https://api.ksk318.me/auth/user/posts/{id} \
 -H "Content-Type: application/json" \
--H "Session-ID: [ユーザーログイン時に戻ったセッションid]" \
 -H "Session-ID: [ユーザーセッション]"
 
 # 成功時の戻り値

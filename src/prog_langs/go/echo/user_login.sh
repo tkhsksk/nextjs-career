@@ -1,4 +1,4 @@
-curl -X POST https://api.ksk318.me/user/login \
+curl -X POST https://api.ksk318.me/auth/user/login \
 -H "Content-Type: application/json" \
 -d '{
     "email": "user@example.com",
