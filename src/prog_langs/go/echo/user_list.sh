@@ -1,5 +1,5 @@
 # ユーザーの取得
-curl -X GET http://localhost:4207/users \
+curl -X GET http://localhost:4207/authed/admin/users \
 -H "Content-Type: application/json" \
 -H "Session-ID: [管理者セッション]"
 

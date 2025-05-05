@@ -1,5 +1,5 @@
 # セッションの取得
-curl -X GET https://api.ksk318.me/users/sessions/1 \
+curl -X GET https://api.ksk318.me/authed/admin/users/sessions/1 \
 -H "Content-Type: application/json" \
 -H "Session-ID: [管理者セッション]"
 

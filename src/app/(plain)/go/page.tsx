@@ -1327,7 +1327,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/auth/user/posts'],
+                  ['local(Mac OS)','/authed/user/posts'],
                   ['UbuntuServer 24.04.2 LTS','/auth/user/posts']
                ]}
             />
@@ -1350,7 +1350,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/auth/user/posts/:id'],
+                  ['local(Mac OS)','/authed/user/posts/:id'],
                   ['UbuntuServer 24.04.2 LTS','/auth/user/posts/:id']
                ]}
             />
@@ -1373,7 +1373,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/auth/user/posts'],
+                  ['local(Mac OS)','/authed/user/posts'],
                   ['UbuntuServer 24.04.2 LTS','/auth/user/posts']
                ]}
             />
@@ -1396,7 +1396,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/auth/user/posts/:id'],
+                  ['local(Mac OS)','/authed/user/posts/:id'],
                   ['UbuntuServer 24.04.2 LTS','/auth/user/posts/:id']
                ]}
             />
@@ -1419,7 +1419,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/users'],
+                  ['local(Mac OS)','/authed/admin/users'],
                   ['UbuntuServer 24.04.2 LTS','/users']
                ]}
             />
@@ -1442,7 +1442,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/users/:id'],
+                  ['local(Mac OS)','/authed/admin/users/:id'],
                   ['UbuntuServer 24.04.2 LTS','/users/:id']
                ]}
             />
@@ -1465,7 +1465,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/users/sessions'],
+                  ['local(Mac OS)','/authed/admin/users/sessions'],
                   ['UbuntuServer 24.04.2 LTS','/users/sessions']
                ]}
             />
@@ -1488,7 +1488,7 @@ export default function Home() {
                   '確認用URL'
                ]}
                envs={[
-                  ['local(Mac OS)','/users/sessions/:id'],
+                  ['local(Mac OS)','/authed/admin/users/sessions/:id'],
                   ['UbuntuServer 24.04.2 LTS','/users/sessions/:id']
                ]}
             />
