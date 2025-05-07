@@ -998,7 +998,7 @@ export default function Home() {
             goモジュールの設定とginのインストールをします</p>
             <Syntax
                lang='go'
-               path='go/echo/install.sh'
+               path='go/echo/sh/install.sh'
             />
             <p className="leading-7 mb-3">インストールが完了したら、{WrapCode('git環境')}を構築してlocalにcloneしましょう<br />
             次の項目からlocal(macOS上)で実行します</p>
@@ -1129,7 +1129,7 @@ export default function Home() {
             先ほどmain.goに作成したトップページ以外のapi処理は、handler/*に分けました</p>
             <Syntax
                lang='go'
-               path='go/echo/handler.sh'
+               path='go/echo/sh/handler.sh'
             />
 
             <div className="break-all relative shadow-md p-6 sm:rounded-lg mb-4 grid overflow-hidden w-fit bg-slate-200">
@@ -1218,7 +1218,7 @@ export default function Home() {
             <p className="font-semibold mb-3">ユーザー登録API</p>
             <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
             <DevProdTable
-               id='user_register'
+               id='u_register'
                names={[
                   '環境名(環境)',
                   '確認用URL'
@@ -1232,7 +1232,7 @@ export default function Home() {
             <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザー登録')}が可能です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/user_register.sh'
+                path='go/echo/sh/user_register.sh'
             />
 
             <hr className="my-5" />
@@ -1256,7 +1256,7 @@ export default function Home() {
             必ず{WrapCode('受信できるアドレス')}で実行してください</p>
             <Syntax
                 lang='sh'
-                path='go/echo/admin_register.sh'
+                path='go/echo/sh/admin_register.sh'
             />
             <p className="leading-7 mb-3">成功すると以下のメールが届きます</p>
             <Image
@@ -1290,7 +1290,7 @@ export default function Home() {
             ログインと同時に{WrapCode('json')}でログインセッションが戻り値で取得できます</p>
             <Syntax
                 lang='sh'
-                path='go/echo/user_login.sh'
+                path='go/echo/sh/user_login.sh'
             />
 
             <hr className="my-5" />
@@ -1308,12 +1308,33 @@ export default function Home() {
                   ['UbuntuServer 24.04.2 LTS','/auth/admin/login']
                ]}
             />
-
             <p className="leading-7 mb-3">以下を実行すると{WrapCode('管理者ログイン')}が可能です<br />
             ログインと同時に{WrapCode('json')}でログインセッションが戻り値で取得できます</p>
             <Syntax
                 lang='sh'
-                path='go/echo/admin_login.sh'
+                path='go/echo/sh/admin_login.sh'
+            />
+
+            <hr className="my-5" />
+
+            <p className="font-semibold mb-3">ユーザープロフィールAPI</p>
+            <Caution text="api.ksk318.meでのapi稼働は<span class='font-semibold'>9:00〜18:00</span>です" />
+            <DevProdTable
+               id='u_prof'
+               names={[
+                  '環境名(環境)',
+                  '確認用URL'
+               ]}
+               envs={[
+                  ['local(Mac OS)','/authed/user/profiles'],
+                  ['UbuntuServer 24.04.2 LTS','/authed/user/profiles']
+               ]}
+            />
+            <p className="leading-7 mb-3">以下を実行すると{WrapCode('ユーザー自身のプロフィール取得')}が可能です<br />
+            {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
+            <Syntax
+                lang='sh'
+                path='go/echo/sh/user_profile.sh'
             />
 
             <hr className="my-5" />
@@ -1336,7 +1357,7 @@ export default function Home() {
             {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/post.sh'
+                path='go/echo/sh/post.sh'
             />
 
             <hr className="my-5" />
@@ -1359,7 +1380,7 @@ export default function Home() {
             {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/post_put.sh'
+                path='go/echo/sh/post_put.sh'
             />
 
             <hr className="my-5" />
@@ -1382,7 +1403,7 @@ export default function Home() {
             ユーザーログイン時のセッションが必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/post_get.sh'
+                path='go/echo/sh/post_get.sh'
             />
 
             <hr className="my-5" />
@@ -1405,7 +1426,7 @@ export default function Home() {
             {WrapCode('ユーザーログイン時のセッション')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/post_get_byid.sh'
+                path='go/echo/sh/post_get_byid.sh'
             />
 
             <hr className="my-5" />
@@ -1428,7 +1449,7 @@ export default function Home() {
             取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/user_list.sh'
+                path='go/echo/sh/user_list.sh'
             />
 
             <hr className="my-5" />
@@ -1451,7 +1472,7 @@ export default function Home() {
             取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/user.sh'
+                path='go/echo/sh/user.sh'
             />
 
             <hr className="my-5" />
@@ -1474,7 +1495,7 @@ export default function Home() {
             取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/session.sh'
+                path='go/echo/sh/session.sh'
             />
 
             <hr className="my-5" />
@@ -1497,7 +1518,7 @@ export default function Home() {
             取得には{WrapCode('管理者ログイン時のセッションID')}が必要です</p>
             <Syntax
                 lang='sh'
-                path='go/echo/session_byid.sh'
+                path='go/echo/sh/session_byid.sh'
             />
 
             <hr className="my-5" />
