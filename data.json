@@ -49,12 +49,25 @@
         },
         {
             "id": 6,
+            "title": "api",
+            "detail": "go echoによるapi",
+            "subs": [
+                "register",
+                "login",
+                "profile",
+                "posts",
+                "users",
+                "sessions"
+            ]
+        },
+        {
+            "id": 7,
             "title": "swift",
             "detail": "swiftについて",
             "subs": ["helloWorld","calc","func,class","array","ios"]
         },
         {
-            "id": 7,
+            "id": 8,
             "title": "JavaScript",
             "detail": "主にnext.jsについて",
             "subs": ["basis","customize"]

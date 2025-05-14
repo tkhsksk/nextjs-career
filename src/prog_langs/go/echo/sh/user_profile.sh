@@ -3,4 +3,4 @@ curl -X GET https://api.ksk318.me/authed/user/profiles \
 -H "Session-ID: [ユーザーログインセッション]"
 
 # 戻り値の例
-# {"message":"ログイン成功","session_id":"xxx"}
+# {"message":"取得成功","session_id":"xxx"}
